@@ -95,8 +95,26 @@
 
 // console.log(`My name is ${stroke}`);
 
-let arr = [1,2,3,4,5,6,7,8,9,10];
+// let arr = [1,2,3,4,5,6,7,8,9,10];
 
-const newArr = arr.filter(i => i % 2 == 0)
-console.log(newArr)
+// const newArr = arr.filter(i => i % 2 == 0)
+// console.log(newArr)
 
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: {},
+    privat: false,
+};
+
+let lastFilmWatched = prompt('Последний просмотренный фильм?');
+let rateOfFilm = +prompt('Какую оценку дадите фильму?');
+
+personalMovieDB.movies = {
+    [lastFilmWatched] : rateOfFilm,
+};
+
+console.log(personalMovieDB);
