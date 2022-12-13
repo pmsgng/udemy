@@ -100,21 +100,142 @@
 // const newArr = arr.filter(i => i % 2 == 0)
 // console.log(newArr)
 
-let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+// let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: {},
-    privat: false,
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: {},
+//     privat: false,
+// };
 
-let lastFilmWatched = prompt('Последний просмотренный фильм?');
-let rateOfFilm = +prompt('Какую оценку дадите фильму?');
+// let lastFilmWatched = prompt('Последний просмотренный фильм?');
+// let rateOfFilm = +prompt('Какую оценку дадите фильму?');
 
-personalMovieDB.movies = {
-    [lastFilmWatched] : rateOfFilm,
-};
+// personalMovieDB.movies = {
+//     [lastFilmWatched] : rateOfFilm,
+// };
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
+
+// if(true) console.log('Hi!');
+
+
+// const num = 5;
+// (num > 10) ? console.log('OK!') : console.log('Error!');
+
+// switch (num) {
+//     case 49:
+//         console.log('Neverno');
+//         break;
+//     case 100:
+//         console.log('Neverno');
+//         break;
+//     case 50:
+//         console.log('Verno');
+//         break;
+//     default: 
+//         console.log('Try next time');
+//         break;
+// }
+
+// console.log(0 || 0 || false)
+// console.log('kate' && 1 && 'sasha');
+
+// let reportJhone, reportSam, reportMaria = 'done';
+// console.log(reportJhone || reportSam || reportMaria)
+
+// console.log(5 === 5 && 0 > 1 || 1);
+
+// console.log(NaN || 2 || undefined);
+// console.log(NaN && 2 && undefined);
+// console.log(1 && 2 && 3);
+// console.log(!1 && 2 || !3);
+// console.log(25 || null && !3);
+// console.log(NaN || null || !3 || undefined || 5);
+// console.log(NaN || null && !3 && undefined || 5);
+// console.log(5 === 5 && 3 > 1 || 5);
+
+// let num = 55;
+
+// while (num < 60) {
+//     console.log(`${num} qqq`);
+//     num++;
+// }
+
+// for (let i = 0; i < 10; i++) {
+//     if(i === 5) {
+//         break;
+//         // continue;
+//     }
+//     console.log(`Цикл ${i}`)
+// };
+
+// let result = '';
+// const length = 7;
+
+// for(let i = 1; i < length; i++) {
+//     for(let j = 0; j < i; j++) {
+//         result += '*'
+//     }
+//     result += '\n';
+// }
+
+// console.log(result);
+
+// for (let i = 5; i < 11; i++) {
+//     console.log(i)
+// };
+
+// for (let i = 20; i > 9; i--) {
+//     if (i === 13) break;
+//     console.log(i)
+// }
+
+// for (let i = 2; i < 11; i++) {
+//     if (i % 2 == 0) console.log(i);
+// }
+
+// let i = 2;
+
+// while (i <= 16) {
+//     if (i % 2 === 0) {
+//         i++;
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+//     i++;
+// }
+
+// let arrayOfNumbers = [];
+// for(let i = 5; i < 11; i++) {
+//     arrayOfNumbers[i - 5] = i;
+//     // arrayOfNumbers.push(i) 
+// }
+// console.log(arrayOfNumbers);
+
+// function firstTask() {
+//     const arr = [3, 5, 8, 16, 20, 23, 50];
+//     const result = [];
+//     for(let i = 0; i < arr.length; i++) {
+//         result[i] = arr[i]
+//     }
+//     console.log(result);
+// }
+// firstTask();
+
+// const data = [ 10, 20, 'Shopping', 40, 'Homework' ];
+// let result = [];
+
+// for(let i = 0; i < data.length; i++) {
+//     if(typeof(data[i]) === 'string') result[i] = data[i] + ' - done';
+//     if(typeof(data[i]) === 'number') result[i] = data[i]
+// }
+
+// for(let i = data.length; i > 0; i--) {
+//     result.push(data[i - 1]);
+// }
+
+// console.log(result)
