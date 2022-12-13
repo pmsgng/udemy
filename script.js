@@ -239,3 +239,40 @@
 // }
 
 // console.log(result)
+
+// //code wars
+// function getDivisorsCnt(n){
+//     // todo
+//   let acum = 0;
+//   for(let i = 1; i <= n; i++) {
+//     if(n % i !== 0) continue;
+//     acum++;
+//   }
+//   return acum;
+// }
+
+// console.log(getDivisorsCnt(4)) 
+
+// function getGrade (s1, s2, s3) {
+//     // Code here
+//     let score = Math.round((s1 + s2 + s3) / 3);
+//     console.log(score)
+//     if(score >= 0 && score < 60) return 'F'
+//     if(60 <= score && score < 70) return 'D'
+//     if(70 <= score && score < 80) return 'C'
+//     if(80 <= score && score < 90) return 'B'
+//     if(90 >= score && score <= 100 && score > 100) return 'A'
+//   }
+
+//   getGrade(11.3,15,40)
+//   getGrade(44,55,52)
+
+// function powersOfTwo(n){
+//   let acum = [];
+//   for(let i = 0;i <= n; i++) {
+//     acum.push(2 ** i)
+//   }
+//     return acum
+//   }
+//   console.log(powersOfTwo(2))
+
