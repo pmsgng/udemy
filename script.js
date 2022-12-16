@@ -348,3 +348,12 @@
 // }
 
 // console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]))
+
+// let number = function(array) {
+//     //your awesome code here
+//     const newList = array.map((item,index) => {
+//         return `${index + 1}: ${item}`
+//     })
+//     return newList
+// }
+// console.log(number(["a", "b", "c"]));
