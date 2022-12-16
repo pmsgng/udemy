@@ -331,3 +331,20 @@
 
 //     console.log(hero(1,0));
 
+
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+
+// function points(games) {
+//     let ourTeamScore = 0;
+//     games.forEach(game => {
+//         if(game[0] > game[2]) ourTeamScore += 3;
+//         if(game[0] < game[2]) return;
+//         if(game[0] == game[2]) ourTeamScore += 1;
+//     })
+//     return ourTeamScore;
+// }
+
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]))
