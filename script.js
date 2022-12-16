@@ -275,4 +275,3 @@
 //     return acum
 //   }
 //   console.log(powersOfTwo(2))
-
