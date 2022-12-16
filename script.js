@@ -275,3 +275,59 @@
 //     return acum
 //   }
 //   console.log(powersOfTwo(2))
+
+// const list = ["Ryan", "Kieran", "Jason", "Yous",'131'];
+
+// function friend(friends){
+//     //your code here
+//     const myFriends = friends.filter((word) => {
+//        if(isNaN(+word) && word.length < 5) return word;
+//     })
+//     return myFriends;
+// }
+
+// console.log(friend(list));
+
+// // console.log(list.filter(word => word.length < 5));
+
+// console.log(list.filter(word => {
+//     if(isNaN(+word)) {
+//         return word
+//     }
+// }));
+
+// function cockroachSpeed(s) {
+//     //Good Luck!
+//     const cmS = s * 100000 / 3600;
+//     return Math.floor(cmS)
+//   }
+
+//  console.log(cockroachSpeed(0));
+
+
+//  function rentalCarCost(d) {
+//     // Your solution here
+//     let dayPrice = 40;
+//     let threeDaysDiscount = 20;
+//     let sevenDaysDiscount = 50;
+
+//     if(d < 3) return d * dayPrice
+//     if(d > 2 && d < 7) return d * dayPrice - threeDaysDiscount;
+//     if(d > 6) return d * dayPrice - sevenDaysDiscount;
+//   }
+
+//   console.log(rentalCarCost(10));
+//   console.log(7 * 40 - 50)
+
+
+// function hero(bullets, dragons){
+//     //Get Coding!
+//       if(dragons * 2 <= bullets ) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     }
+
+//     console.log(hero(1,0));
+
