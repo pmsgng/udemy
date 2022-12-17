@@ -377,3 +377,28 @@
 // }
 
 //   console.log('asdsadas'.isUpperCase())
+
+
+
+
+// function getAge(inputString) {
+//     // return the girl's correct age as an integer. Happy coding :) 
+//     return +inputString.match(/[0-9]/)[0]
+// }
+
+// console.log(getAge('4 years'));
+
+
+
+
+function findNextSquare(sq) {
+    // Return the next square if sq is a perfect square, -1 otherwise
+    let number = Math.sqrt(sq);
+    if(Number.isInteger(number)) {
+        return Math.pow(++number, 2)
+    } else {
+        return -1;
+    }
+  }
+
+  console.log(findNextSquare(120)) 
