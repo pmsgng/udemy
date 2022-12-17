@@ -391,14 +391,35 @@
 
 
 
-function findNextSquare(sq) {
-    // Return the next square if sq is a perfect square, -1 otherwise
-    let number = Math.sqrt(sq);
-    if(Number.isInteger(number)) {
-        return Math.pow(++number, 2)
-    } else {
-        return -1;
-    }
-  }
+// function findNextSquare(sq) {
+//     // Return the next square if sq is a perfect square, -1 otherwise
+//     let number = Math.sqrt(sq);
+//     if(Number.isInteger(number)) {
+//         return Math.pow(++number, 2)
+//     } else {
+//         return -1;
+//     }
+//   }
 
-  console.log(findNextSquare(120)) 
+//   console.log(findNextSquare(120)) 
+
+
+
+
+// String.prototype.toAlternatingCase = function () {
+//     // Define your method here :)
+//     let newWords = [];
+//     for (let i = 0; i < this.length; i++) {
+
+//         if (this[i] === this[i].toUpperCase()) {
+//             newWords.push(this[i].toLowerCase())
+//         } else if (this[i] === this[i].toLowerCase()) {
+//                 newWords.push(this[i].toUpperCase())
+//         } else {
+//             continue;
+//         }
+//     }
+//     return newWords.join('');
+// }
+
+// console.log('hello world'.toAlternatingCase());
