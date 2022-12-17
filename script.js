@@ -357,3 +357,11 @@
 //     return newList
 // }
 // console.log(number(["a", "b", "c"]));
+
+
+
+// function setAlarm(employed, vacation){
+//     return employed === true && vacation === false
+// }
+
+// console.log(setAlarm(true,false))
