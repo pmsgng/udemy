@@ -365,3 +365,15 @@
 // }
 
 // console.log(setAlarm(true,false))
+
+
+// String.prototype.isUpperCase = function() {
+//     // your code here
+//     if(this.match(/[a-z]/)) {
+//         return false
+//     } else {
+//         return true
+//     }
+// }
+
+//   console.log('asdsadas'.isUpperCase())
