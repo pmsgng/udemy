@@ -432,3 +432,34 @@
 //   }
 
 //   console.log(descendingOrder(123479));
+
+
+
+
+function rowSumOddNumbers(n) {
+    // TODO
+    let arrOdd = [];
+    let countNum = 0;
+    let numOdd = 1;
+    let sumOdd = 0;
+
+    for (let i = n; i > 0; i--) {
+        countNum += i;
+    }
+    // console.log(countNum)
+
+    for (let i = 1; i <= countNum; i++) {
+        arrOdd.push(numOdd)
+        numOdd += 2
+    }
+    // console.log(arrOdd);
+
+    for(let i = n; i > 0; i--) {
+        let numOfArr = arrOdd.length - i;
+        sumOdd = sumOdd + arrOdd[numOfArr]
+    }
+    // console.log(sumOdd)
+    return sumOdd;
+}
+
+console.log(rowSumOddNumbers(3));
