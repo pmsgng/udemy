@@ -423,3 +423,12 @@
 // }
 
 // console.log('hello world'.toAlternatingCase());
+
+
+
+// function descendingOrder(n){
+//     //...
+//     return +`${n}`.split('').sort((a,b) => b - a).join('')
+//   }
+
+//   console.log(descendingOrder(123479));
