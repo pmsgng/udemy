@@ -436,30 +436,71 @@
 
 
 
-function rowSumOddNumbers(n) {
-    // TODO
-    let arrOdd = [];
-    let countNum = 0;
-    let numOdd = 1;
-    let sumOdd = 0;
+// function rowSumOddNumbers(n) {
+//     // TODO
+//     let arrOdd = [];
+//     let countNum = 0;
+//     let numOdd = 1;
+//     let sumOdd = 0;
 
-    for (let i = n; i > 0; i--) {
-        countNum += i;
-    }
-    // console.log(countNum)
+//     for (let i = n; i > 0; i--) {
+//         countNum += i;
+//     }
+//     // console.log(countNum)
 
-    for (let i = 1; i <= countNum; i++) {
-        arrOdd.push(numOdd)
-        numOdd += 2
-    }
-    // console.log(arrOdd);
+//     for (let i = 1; i <= countNum; i++) {
+//         arrOdd.push(numOdd)
+//         numOdd += 2
+//     }
+//     // console.log(arrOdd);
 
-    for(let i = n; i > 0; i--) {
-        let numOfArr = arrOdd.length - i;
-        sumOdd = sumOdd + arrOdd[numOfArr]
-    }
-    // console.log(sumOdd)
-    return sumOdd;
-}
+//     for(let i = n; i > 0; i--) {
+//         let numOfArr = arrOdd.length - i;
+//         sumOdd = sumOdd + arrOdd[numOfArr]
+//     }
+//     // console.log(sumOdd)
+//     return sumOdd;
+// }
 
-console.log(rowSumOddNumbers(3));
+// console.log(rowSumOddNumbers(3));
+
+// function doSecond() {
+//     console.log('Do second.')
+//   }
+  
+//   function doFirst(callback) {
+//     setTimeout(function () {
+//       console.log('Do first.')
+  
+//       callback()
+//     }, 2000)
+//   }
+  
+//   doFirst(doSecond)
+
+
+const users = [
+  {
+    id: 1,
+    name: 'Charlie',
+    job: 'Janitor',
+  },
+  {
+    id: 2,
+    name: 'Mac',
+    job: 'Bouncer',
+  },
+  {
+    id: 3,
+    name: 'Dee',
+    job: 'Aspring actress',
+  },
+  {
+    id: 4,
+    name: 'Dennis',
+    job: 'Bartender',
+  },
+]
+
+const newUsers = [...users.filter(i => i.id !== 2)]
+console.log(newUsers);
