@@ -504,3 +504,10 @@ const users = [
 
 const newUsers = [...users.filter(i => i.id !== 2)]
 console.log(newUsers);
+
+const filterUsers = [...users.filter(user => {
+  return user.name.includes('D')
+})]
+console.log(filterUsers)
+
+console.log(0 && 'good');
