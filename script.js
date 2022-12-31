@@ -525,3 +525,16 @@
 // }
 
 // beep();
+
+async function getData() {
+  try {
+    const response = await fetch();
+    const data = await response.json();
+
+    return data;
+  } catch(error) {
+    console.log(error);
+  }
+}
+
+const dataJson = getData();
