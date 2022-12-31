@@ -479,35 +479,49 @@
 //   doFirst(doSecond)
 
 
-const users = [
-  {
-    id: 1,
-    name: 'Charlie',
-    job: 'Janitor',
-  },
-  {
-    id: 2,
-    name: 'Mac',
-    job: 'Bouncer',
-  },
-  {
-    id: 3,
-    name: 'Dee',
-    job: 'Aspring actress',
-  },
-  {
-    id: 4,
-    name: 'Dennis',
-    job: 'Bartender',
-  },
-]
+// const users = [
+//   {
+//     id: 1,
+//     name: 'Charlie',
+//     job: 'Janitor',
+//   },
+//   {
+//     id: 2,
+//     name: 'Mac',
+//     job: 'Bouncer',
+//   },
+//   {
+//     id: 3,
+//     name: 'Dee',
+//     job: 'Aspring actress',
+//   },
+//   {
+//     id: 4,
+//     name: 'Dennis',
+//     job: 'Bartender',
+//   },
+// ]
 
-const newUsers = [...users.filter(i => i.id !== 2)]
-console.log(newUsers);
+// const newUsers = [...users.filter(i => i.id !== 2)]
+// console.log(newUsers);
 
-const filterUsers = [...users.filter(user => {
-  return user.name.includes('D')
-})]
-console.log(filterUsers)
+// const filterUsers = [...users.filter(user => {
+//   return user.name.includes('D')
+// })]
+// console.log(filterUsers)
 
-console.log(0 && 'good');
+// console.log(0 && 'good');
+
+// class Car {
+//   handle() {
+//     console.log(this)
+//   }
+// }
+
+// const car = new Car();
+
+// function beep() {
+//     car.handle();
+// }
+
+// beep();
