@@ -467,15 +467,15 @@
 // function doSecond() {
 //     console.log('Do second.')
 //   }
-  
+
 //   function doFirst(callback) {
 //     setTimeout(function () {
 //       console.log('Do first.')
-  
+
 //       callback()
 //     }, 2000)
 //   }
-  
+
 //   doFirst(doSecond)
 
 
@@ -526,18 +526,37 @@
 
 // beep();
 
-// async await
-async function getData() {
-  try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await response.json();
+// async await 
+// async function getData() {
+//   try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const data = await response.json();
 
-    return data;
-  } catch(error) {
-    console.log(error);
-  }
-}
+//     return data;
+//   } catch(error) {
+//     console.log(error);
+//   }
+// }
 
-const dataJson = getData();
+// const dataJson = getData();
 
-console.log(dataJson)
+// console.log(dataJson)
+
+// function getMathResult(num, lvl) {
+//   let res = [];
+//   if(lvl <= 0) return num;
+//   for (let i = 1; i <= lvl; i++) {
+//     res.push(num * i)
+
+//   }
+//   return res.join(',').replaceAll(',', '---');
+// }
+// console.log(getMathResult(10, 5));
+
+
+// let word = 'Hello world!';
+
+// console.log(word.slice(word.indexOf('world'),word.indexOf('world') + 5));
+
+// console.log(parseInt('12.2rem'));
+// console.log(parseFloat('12.2rem'));
