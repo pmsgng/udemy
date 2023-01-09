@@ -526,9 +526,10 @@
 
 // beep();
 
+// async await
 async function getData() {
   try {
-    const response = await fetch();
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
 
     return data;
@@ -538,3 +539,5 @@ async function getData() {
 }
 
 const dataJson = getData();
+
+console.log(dataJson)
