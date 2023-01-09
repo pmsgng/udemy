@@ -560,3 +560,66 @@
 
 // console.log(parseInt('12.2rem'));
 // console.log(parseFloat('12.2rem'));
+
+
+
+// function calculateVolumeAndArea(lengthOfCube) {
+//   const square = lengthOfCube ** 2 * 6;
+//   const volume = lengthOfCube ** 3;
+
+//   return `Объем куба: ${volume}, площадь всей поверхности: ${square}`
+// }
+
+// console.log(calculateVolumeAndArea(5));
+
+// console.log('' == ' '.trim())
+
+// function GO(walk, callback) {
+//   console.log(`I wallk ${walk}km`);
+//   callback();
+// }
+
+// function time() {
+//   console.log('15 min')
+// }
+
+// GO(10, time)
+
+let obj = {
+  name: 'Anna',
+  age: 22,
+  job: 'SBER',
+  parents: {
+    mom: 'Dasha',
+    dad: 'Oleg',
+  },
+  sayHello() {
+    console.log('Hello')
+  }
+}
+
+// const copyObj = JSON.parse(JSON.stringify(obj))
+
+// for(let key in obj) {
+//   if(obj[key] == 'Anna') {
+
+//   }
+// }
+// const notCopyObj = obj;
+
+// notCopyObj.name = 'Sasha'
+// copyObj.name = 'Kate'
+
+// console.log(obj);
+// console.log(copyObj);
+
+console.log(Object.keys(obj)); // [...keys]
+
+console.log(Object.keys(obj).length); // 4 length   
+
+obj.sayHello() // Hello 
+
+const {mom,dad} = obj.parents;
+
+console.log(mom);
+console.log(dad);
