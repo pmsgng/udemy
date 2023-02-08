@@ -585,18 +585,7 @@
 
 // GO(10, time)
 
-let obj = {
-  name: 'Anna',
-  age: 22,
-  job: 'SBER',
-  parents: {
-    mom: 'Dasha',
-    dad: 'Oleg',
-  },
-  sayHello() {
-    console.log('Hello')
-  }
-}
+
 
 // const copyObj = JSON.parse(JSON.stringify(obj))
 
@@ -613,13 +602,84 @@ let obj = {
 // console.log(obj);
 // console.log(copyObj);
 
-console.log(Object.keys(obj)); // [...keys]
+// console.log(Object.keys(obj)); // [...keys]
 
-console.log(Object.keys(obj).length); // 4 length   
+// console.log(Object.keys(obj).length); // 4 length   
 
-obj.sayHello() // Hello 
+// obj.sayHello() // Hello 
 
-const {mom,dad} = obj.parents;
+// const {mom,dad} = obj.parents;
+// const {age,name,job} = obj;
+// console.log(mom);
+// console.log(dad);
+// console.log(name);
+// console.log(age);
+// console.log(job);
 
-console.log(mom);
-console.log(dad);
+// const arr = [1,2,3,4,5,6,7];
+
+// const newArr = arr.copyWithin()
+// console.log(newArr);
+
+// let age = () => {
+//   return 5;
+// }
+// let name;
+// console.log(name ?? age())
+
+
+// const str = 'hasfui,gsaifu,asdad';
+// let res = str.split(',');
+// console.log(res);
+
+// const arr = [1,2,3,4,5,6];
+// const realCopy = [...arr];
+// const copy = arr;
+// copy.push(1);
+// console.log(copy , arr);
+// console.log(realCopy)
+
+
+// let obj = {
+//   name: 'Anna',
+//   age: 22,
+//   job: 'SBER',
+//   parents: {
+//     mom: 'Dasha',
+//     dad: 'Oleg',
+//   },
+//   sayHello() {
+//     console.log('Hello')
+//   }
+// }
+
+// const copy = {...obj};
+// copy.job = 'AIM';
+// console.log(obj,copy);
+
+// console.log(first)
+
+// function getGrade(s1,s2,s3) {
+//   let value = (s1 + s2 + s3) / 3;
+//   if(0 <= value && value < 60) return 'F'
+//   if(value >= 60 && value < 70) return 'D'
+//   if(value >= 70 && value < 80) return 'C'
+//   if(value >= 80 && value < 90) return 'B'
+//   if(value >= 90 && value <= 100) return 'A'
+// }
+
+// console.log(getGrade(95,60,70))
+
+// function fakeBin(x){
+//   let newArr = [];
+//   x.split('').forEach(i => {
+//     if(i < 5) newArr.push(0);
+//     if(i >= 5) newArr.push(1);
+//   });
+//   return newArr.join();
+// }
+
+// console.log(fakeBin('45385593107843568'));
+
+
+
