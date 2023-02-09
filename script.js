@@ -822,3 +822,31 @@
 // }
 
 // console.log(salSum(salaries)); 
+
+// до вызова функции
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+
+// function multiplyNumeric(obj) {
+//   for(let key in obj) {
+//     typeof obj[key] === 'number' ? obj[key] *= 2 : null
+//   }
+//   return obj;
+// }
+// console.log(multiplyNumeric(menu)) 
+
+let o = {
+  age:14,
+  p: {
+    mom: "A",
+    dad: 'D'
+  }
+};
+
+let o2 = Object.assign({},o)
+let o3 = JSON.parse(JSON.stringify(o2)) // глубокое клонирования объекта 
+o3.p.dad = 14;
+console.log(o, o2, o3) 
