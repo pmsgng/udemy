@@ -653,6 +653,17 @@
 //   }
 // }
 
+// let newObj = {...obj};
+
+// newObj.parents.mom = 'Kate';
+
+// console.log(obj, newObj);
+// let realCopy = JSON.parse(JSON.stringify(obj));
+
+// realCopy.parents.mom = 'Natasha';
+
+// console.log(realCopy)
+
 // const copy = {...obj};
 // copy.job = 'AIM';
 // console.log(obj,copy);
@@ -682,4 +693,132 @@
 // console.log(fakeBin('45385593107843568'));
 
 
+// console.log(JSON.parse(JSON.stringify(obj)))
 
+
+// const personalPlanPeter = {
+//   name: "Peter",
+//   age: "29",
+//   skills: {
+//       languages: ['ru', 'eng'],
+//       programmingLangs: {
+//           js: '20%',
+//           php: '10%'
+//       },
+//       exp: '1 month'
+//   },
+//   showAgeAndLangs(obj) {
+//     return `Мне ${obj['age']} и я владею языками: ${obj.skills.languages[0]} ${obj.skills.languages[1]}`
+//   }
+// };
+
+// function showExperience(plan) {
+//   const {skills: {languages, programmingLangs : {js , php} , exp}} = plan
+//   return exp
+// }
+// console.log(showExperience(personalPlanPeter)) 
+
+// function showProgrammingLangs(plan) {
+//   const {skills: {languages, programmingLangs : {js , php}} , exp } = plan
+//   return `Язык js изучен на ${js} Язык php изучен на ${php}`
+// }
+// console.log(showProgrammingLangs(personalPlanPeter))
+
+// console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter))
+
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//   const [pet, an, al, li] = arr
+//   return `Семья состоит из: ${pet} ${an} ${al} ${li}`
+// }
+// console.log(showFamily(family))
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//   arr.forEach(i => console.log(i.toLowerCase()))
+// }
+// standardizeStrings(family)
+
+
+// let obj2 = {};
+
+// function isEmpty(obj) {
+//   for (let key in obj) {
+//     // если тело цикла начнет выполняться - значит в объекте есть свойства
+//     return false;
+//   }
+//   return true;
+// }
+
+// console.log(isEmpty(obj))
+// console.log(isEmpty(obj2))
+
+// let key = 'name';
+
+// let obj = {
+//   [key] : 'Anna',
+//   age : 13,
+// }
+// console.log(obj[key])
+
+// function makeUser (name,age) {
+//   return {
+//     name,
+//     age,
+//     contry: 'Russia'
+//   }
+// }
+
+// let user = makeUser('Dima',20)
+// console.log(user)
+
+// let user = {
+//   name: "John",
+//   age: 30,
+//   isAdmin: true,
+//   papa: {
+//     dother: 'Masha',
+//     son: {
+//       name: 'Alex'
+//     }
+//   }
+// };
+
+// for(let key in user) {
+//   console.log(key)
+//   if(typeof user[key] === 'object') {
+//     for(let key2 in user[key]) {
+//       console.log(key2)
+//     }
+//   }
+// }
+
+// let codes = {
+//   "+49": "Германия",
+//   "+1": "США",
+//   "+41": "Швейцария",
+//   "+44": "Великобритания",
+// };
+
+// for (let code in codes) {
+//   console.log(+code); 
+// }
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// };
+
+// function salSum(sal) {
+//   let sum = 0;
+//   for(let key in sal) {
+//     sum += sal[key];
+//   }
+//   return sum;
+// }
+
+// console.log(salSum(salaries)); 
