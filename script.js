@@ -838,15 +838,30 @@
 // }
 // console.log(multiplyNumeric(menu)) 
 
-let o = {
-  age:14,
-  p: {
-    mom: "A",
-    dad: 'D'
-  }
-};
+// let o = {
+//   age:14,
+//   p: {
+//     mom: "A",
+//     dad: 'D'
+//   }
+// };
 
-let o2 = Object.assign({},o)
-let o3 = JSON.parse(JSON.stringify(o2)) // глубокое клонирования объекта 
-o3.p.dad = 14;
-console.log(o, o2, o3) 
+// let o2 = Object.assign({},o)
+// let o3 = JSON.parse(JSON.stringify(o2)) // глубокое клонирования объекта 
+// o3.p.dad = 14;
+// console.log(o, o2, o3) 
+
+// let o = {
+//   a: 1,
+//   b: {
+//     c: 1,
+//     d: {
+//       e: 5
+//     }
+//   }
+// };
+
+// let clone = structuredClone(o); // new method to clone obj
+
+// clone.b.d.e = 100;
+// console.log(o , clone)
