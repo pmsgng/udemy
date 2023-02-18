@@ -865,3 +865,124 @@
 
 // clone.b.d.e = 100;
 // console.log(o , clone)
+
+// function strCount(str, letter) {
+//     return str.split(letter).length - 1
+// }
+
+// console.log(strCount('Letter','t'));
+
+
+// console.log('aaadragon'.split('a'));
+// console.log("98436271".split('').sort().join());
+
+// const o = {
+//     a:1,
+//     b:2,
+//     getThis() {
+//         let arrFn = () => this;
+//         return arrFn();
+//     },
+// }
+
+//  const o2 = o;
+
+// console.log(o2.getThis());
+
+// function getThis() {
+//     return this;
+// }
+
+// let fnn = () => this;
+
+// console.log(getThis());
+// console.log(fnn());
+
+
+// const calc = {
+//     read () {
+//         let read = prompt('read');
+//         this.read = read;
+//     }
+// };
+// calc.read();
+// console.log(calc);
+
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//         // return this;
+//     }
+// }
+
+// console.log(ladder.up() ,ladder)
+
+// function User (name,age) {
+//     this.name = name;
+//     this.age = age; 
+//     this.isBigBoy = true;
+
+// }
+
+// const user = new User('Alex',19);
+
+// console.log(user);
+
+// user.isBigBoy = false;
+
+// console.log(user);
+
+// function User () {
+//     this.name = 'Alex';
+//     this.age = 20;
+//     this.isTrueName = function() {
+//         if(this.age > 18) {
+//             this.name = 'Sasha';
+//             return this;
+//         };
+//     }
+// }
+
+// let user = new User;
+// console.log(user.isTrueName())
+
+// const o = {
+//     name: 'Dima',
+//     age: 22,
+//     isDima() {
+//         // берет this из внешнего окружения метода
+//         let a = () => console.log(this)
+//         a();
+//         //берет this внутри метода 
+//         let b = function second() {
+//             console.log(this)
+//         }
+//         b();
+
+//         return null;
+//     }
+// }
+// console.log(o.isDima())
+
+// function Calc () {
+//     this.read = function() {
+//         this.a = +prompt('Number first');
+//         this.b = +prompt('Number second');
+//     };
+//     this.sum = function() {
+//         let sum = this.a + this.b;
+//         return sum;
+//     };
+//     this.mul = function() {
+//         let mul = this.a * this.b;
+//         return mul;
+//     }
+// }
+
+// let calc = new Calc();
+
+// calc.read();
+// console.log(calc.a)
+// console.log(calc.sum())
+// console.log(calc.mul())
