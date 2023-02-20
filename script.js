@@ -986,3 +986,40 @@
 // console.log(calc.a)
 // console.log(calc.sum())
 // console.log(calc.mul())
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
+//     this.read = function() {
+//         let newNum = +prompt('Number');
+//         this.value += newNum;
+//     };
+// }
+
+// let acum = new Accumulator(0);
+
+// acum.read();
+// acum.read();
+// acum.read()
+// console.log(acum.value);
+
+// let user = {
+//     read() {
+//         console.log('good')
+//     }
+// };
+
+// console.log(user.adress?.street);
+// console.log(user.read?.());
+// console.log(user.go?.());
+// let user = {name: 'Alex'};
+// let id = Symbol('id');
+// user[id] = 'Our id';
+
+// const user2 = JSON.parse(JSON.stringify(user))
+// console.log(user[id])
+
+// console.log(user2[id])
+
+// console.log(parseInt('12px'),parseFloat('12px'))
+
+// let fruits = ["Apple", "Orange", "Plum"];
