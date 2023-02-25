@@ -1023,3 +1023,15 @@
 // console.log(parseInt('12px'),parseFloat('12px'))
 
 // let fruits = ["Apple", "Orange", "Plum"];
+
+const btn = document.querySelector('.main__btn');
+
+btn.addEventListener('click', function click() {
+    if(this.innerText == 'CLICK!') {
+        this.innerText = 'CLACK!';
+        this.style.backgroundColor = 'green';
+    } else {
+        this.innerText = 'CLICK!';
+        this.style.backgroundColor = 'red';
+    }
+})
