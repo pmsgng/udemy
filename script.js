@@ -1045,32 +1045,72 @@
 
 // console.log(Array.from(o));
 
-let range = {
-    from: 1,
-    to: 5,
-}
+// let range = {
+//     from: 1,
+//     to: 5,
+// }
 
-range[Symbol.iterator] = function () {
-    return {
-        current: this.from,
-        last: this.to,
+// range[Symbol.iterator] = function () {
+//     return {
+//         current: this.from,
+//         last: this.to,
 
-        next() {
-            if (this.current <= this.last) {
-                return {
-                    done: false,
-                    value: this.current++
-                }
-            } else {
-                return {
-                    done: true
-                }
-            }
-        }
-    }
-}
+//         next() {
+//             if (this.current <= this.last) {
+//                 return {
+//                     done: false,
+//                     value: this.current++
+//                 }
+//             } else {
+//                 return {
+//                     done: true
+//                 }
+//             }
+//         }
+//     }
+// }
 
-for (let num of range) {
-    console.log(num)
-}
+// for (let num of range) {
+//     console.log(num)
+// }
 
+// let m = new Map([
+//     [1 , '1'],
+//     [2 , '2']
+// ]);
+
+// m.set(true , 'true')
+// .set(1 , 'one')
+// .set(2 , 'two')
+
+
+// for( let n of m) {
+//     console.log( n)
+// }
+
+// m.forEach( (val, key , map) => {
+//     console.log(map)
+// });
+
+// const o = {
+//     a: '1',
+//     b: '2',
+//     c: '3',
+//     d: '4'
+// };
+// const o2 = [
+//     [true , 2],
+//     [2 , null]
+// ];
+
+// console.log(Object.fromEntries(o2))
+
+// for( let i in Object.fromEntries(o2)) {
+//     console.log(typeof i)
+// }
+
+
+// let newM = new Map(Object.entries(o))
+// console.log(newM);
+
+// console.log(Object.fromEntries(newM))
