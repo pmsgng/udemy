@@ -1024,14 +1024,53 @@
 
 // let fruits = ["Apple", "Orange", "Plum"];
 
-const btn = document.querySelector('.main__btn');
+// const btntest = document.querySelector('.main__btn');
 
-btn.addEventListener('click', function click() {
-    if(this.innerText == 'CLICK!') {
-        this.innerText = 'CLACK!';
-        this.style.backgroundColor = 'green';
-    } else {
-        this.innerText = 'CLICK!';
-        this.style.backgroundColor = 'red';
+// btntest.addEventListener('click', function click() {
+//     if(this.innerText == 'CLICK!') {
+//         this.innerText = 'CLACK!';
+//         this.style.backgroundColor = 'green';
+//     } else {
+//         this.innerText = 'CLICK!';
+//         this.style.backgroundColor = 'red';
+//     }
+// })
+
+// let o = {
+//     1: 1,
+//     2: 2,
+//     3: 3,
+//     length: 3,
+// }
+
+// console.log(Array.from(o));
+
+let range = {
+    from: 1,
+    to: 5,
+}
+
+range[Symbol.iterator] = function () {
+    return {
+        current: this.from,
+        last: this.to,
+
+        next() {
+            if (this.current <= this.last) {
+                return {
+                    done: false,
+                    value: this.current++
+                }
+            } else {
+                return {
+                    done: true
+                }
+            }
+        }
     }
-})
+}
+
+for (let num of range) {
+    console.log(num)
+}
+
