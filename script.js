@@ -1114,3 +1114,63 @@
 // console.log(newM);
 
 // console.log(Object.fromEntries(newM))
+
+// const m = new Map([
+//     ['one',2],
+//     [3,4],
+//     [5,6]
+// ]);
+
+// console.log(Object.fromEntries(m));
+
+// function unique(arr) {
+//     /* ваш код */
+//     let m = new Set(arr);
+//     return Array.from(m);
+// }
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// console.log(unique(values));
+
+// function Do(a,b,c) {
+//     this.a = a;
+//     this.b = b;
+//     this.c = c;
+//     this.do = () => {
+//         return this.a + this.b + this.c
+//     };
+//     this.go = function () {
+//         return this;
+//     };
+//     this.up = () => {
+//         return this;
+//     }
+// }
+
+// let res = new Do(1,2,3);
+
+// console.log(res.do());
+// console.log(res.go());
+// console.log(res.up());
+
+function an() {
+    const answer = confirm('анжуманя делаешь?');
+
+    if(answer) {
+        alert('Нужно больше анжуманя!')
+        an()
+    }else {
+        alert('чанду не делай да')
+        const ans = +prompt('скок анжумания делаешь?');
+        if(ans > 10) {
+            alert('уфф кёфтэ');
+        } else {
+            alert('кто тяй не пьет тот тьмо,чорт и очкошка')
+            an()
+        }
+    }
+}    
+an()
