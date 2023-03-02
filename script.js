@@ -1156,21 +1156,115 @@
 // console.log(res.go());
 // console.log(res.up());
 
-function an() {
-    const answer = confirm('анжуманя делаешь?');
+// function getUsers(usersCount) {
+//     const count = usersCount; 
+//     const users = new Set();
 
-    if(answer) {
-        alert('Нужно больше анжуманя!')
-        an()
-    }else {
-        alert('чанду не делай да')
-        const ans = +prompt('скок анжумания делаешь?');
-        if(ans > 10) {
-            alert('уфф кёфтэ');
-        } else {
-            alert('кто тяй не пьет тот тьмо,чорт и очкошка')
-            an()
-        }
-    }
-}    
-an()
+//     for(let i = 0; i < count; i++) {
+//         let user = prompt();
+//         users.add(user)
+//     };
+
+//     return console.log(Array.from(users).map(i => i.toUpperCase()));
+// }
+
+// getUsers(2);  
+
+// let john = { name: "John" };
+
+// let map = new Map();
+// map.set(john, "sdasd");
+
+// john = null;
+
+// console.log(map.entries())
+
+// let john = { name: "John" };
+
+// let weakMap = new WeakMap();
+// weakMap.set(john, "...");
+
+// john = null;
+
+// console.log()
+
+// // 📁 visitsCount.js
+// let visitsCountMap = new Map(); // map: пользователь => число визитов
+
+// // увеличиваем счётчик
+// function countUser(user) {
+//   let count = visitsCountMap.get(user) || 0;
+//   visitsCountMap.set(user, count + 1);
+// }
+// let userPasha = {name: 'pasha', age: 22};
+// let userMasha = {name: 'masha', age: 20};
+
+// countUser(userPasha);
+// countUser(userPasha);
+
+// countUser(userMasha)
+// console.log(visitsCountMap)
+
+// let messages = [{
+//         text: "Hello",
+//         from: "John"
+//     },
+//     {
+//         text: "How goes?",
+//         from: "John"
+//     },
+//     {
+//         text: "See you soon",
+//         from: "Alice"
+//     }
+// ];
+
+
+// const readMesMap = new WeakMap();
+// const readMesSet = new WeakSet();
+
+// const userJohn = messages[0];
+
+// readMesMap.set(userJohn);
+
+// readMesSet.add(userJohn);
+
+
+// console.log(readMesMap.has(userJohn))
+// console.log(readMesSet.has(userJohn))
+// console.log(readMesSet)
+
+// let prices = {
+//     banana: 1,
+//     orange: 2,
+//     meat: 4,
+//   };
+
+// const pricesArr = Object.entries(prices);  // массив пар
+
+// const newArr = pricesArr.map(([key , value ]) => [key , value * 2]); // измененный массив пар 
+
+// const newPrices = Object.fromEntries(newArr); // возвращаем новый объект c ценами
+
+// console.log(newPrices)
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+//   };
+
+// const sumSalaries = (salaries) => {
+//    const salArr = Object.values(salaries);
+//    let sumSal = 0;
+
+//    for(let sal of salArr) {
+//     sumSal += sal
+//    }
+//    return sumSal;
+// }
+
+// console.log(sumSalaries(salaries)) 
+
+
+
