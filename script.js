@@ -1278,3 +1278,119 @@
 
 // console.log(count(user)) 
 
+// let [firstName, surname] = "Ilya Kantor".split(' ');
+
+// console.log(`1:${firstName} 2:${surname}`)
+
+// let user = {
+//     name: "John",
+//     years: 30
+//   };
+
+// let {name , years , isAdmin = false} = user;
+
+// console.log(name, years , isAdmin) ;
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+//   };
+
+//   for(let [name, sal] of Object.entries(salaries)) {
+//     console.log(sal)
+//   }
+
+// const o = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// }
+
+// console.log(Object.entries(o))
+
+// let [firstName, , ,title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+// console.log(title)
+
+// let map = new Map([
+//   ['name','Alice'],
+//   ['age', 15]
+// ]);
+
+// console.log(map);
+
+// const o = Object.fromEntries(map);
+// console.log(o)
+// console.log(Object.entries(o))
+
+// for(let key in o) {
+//   console.log(`${key} : ${o[key]}`)
+// }
+
+// for(let [key,value] of map ) {
+//   console.log(`${key} : ${value}`)
+// }
+
+// let john = { name: "John" };
+
+// let array = [ john ];
+
+// john = null;
+
+// console.log(array[0])
+// console.log(array[0])
+
+// let wm = new WeakMap([
+// [john , 'name']
+// ]);
+// console.log(wm.has(john))
+// john = null;
+// console.log(wm.has(john)) 
+
+
+
+// let visitsCountMap = new WeakMap(); // map: пользователь => число визитов
+
+// увеличиваем счётчик
+// function countUser(user) {
+//   let count = visitsCountMap.get(user) || 0;
+//   visitsCountMap.set(user, count + 1);
+// }
+
+
+// let john = { name: "John" };
+
+// countUser(john); //ведём подсчёт посещений
+
+// countUser(john); //ведём подсчёт посещений
+
+// countUser(john); //ведём подсчёт посещений
+// console.log(visitsCountMap.has(john))
+
+
+// // пользователь покинул нас
+// john = null;
+// console.log(visitsCountMap.has(john))
+// const o = {name: 'Alice'};
+
+// const wm = new WeakMap([
+//     [o , 'Alice']
+// ]);
+// console.log(wm.has(o))
+
+// let user = {
+//     name: 'John',
+//     age: 30
+// };
+
+// function count(o) {
+//     return Object.values(o).length;
+// }
+
+// console.log(count(user)) 
+// let guest = 'alex';
+// let admin = 'dima';
+
+// [guest, admin] = [admin, guest];
+// console.log(guest, admin);
