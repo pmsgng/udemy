@@ -1439,3 +1439,18 @@
 // console.log(`Today: ${date.getDate()} ${month[date.getMonth()]} ${days[date.getDay()]}`)
 
 // let d = new Date(2012 , 1, 20, 3, 12);
+
+// const pow = (x , n) => {
+//   if(n == 1) {
+//     return x;
+//   } else {
+//     return x * pow(x , n - 1)
+//     //1)   2 * pow(2, 3)
+//     //2)   2 * pow(2, 2)
+//     //3)   2 * pow(2, 1)
+//     // Итог: 2 * 2 = 4,  2 * 4 = 8, 2 * 8 = 16! 
+//   }
+// }
+
+// console.log(pow(2,4))
+
