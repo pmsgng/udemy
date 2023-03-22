@@ -1454,3 +1454,29 @@
 
 // console.log(pow(2,4))
 
+// function args() {
+//     return arguments
+// }
+
+// console.log(args(1,2,3,4))
+
+// let arr1 = [1,2,3,4];
+// let arr2 = [5,6,7,8];
+
+// let arr3 = [...arr1,...arr2];
+// console.log(arr3)
+
+// let s = 'Hi how are u';
+// console.log([...s])
+// let ar = [...s];
+// console.log(ar.join(''))
+
+// let name = "John";
+
+// function sayHi() {
+//   console.log("Hi, " + name);
+// }
+
+// name = "Pete";
+
+// sayHi();
