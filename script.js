@@ -1418,7 +1418,7 @@
 //     title: "My menu",
 //     items: ["Item1", "Item2"]
 //   };
-  
+
 //   function showMenu({
 //     title = "Untitled",
 //     width: w = 100,  // width присваиваем в w
@@ -1429,7 +1429,7 @@
 //     console.log( item1 ); // Item1
 //     console.log( item2 ); // Item2
 //   }
-  
+
 //   showMenu(options);
 
 // let date = new Date();
@@ -1480,3 +1480,128 @@
 // name = "Pete";
 
 // sayHi();
+
+// function makeWorker() {
+//     let name = "Pete";
+
+//     return function() {
+//       console.log(name);
+//     };
+//   }
+
+//   let name = "John";
+
+//   // create a function
+//   let work = makeWorker();
+//   // call it
+//   work();
+
+// function sayHiBye(firstName, lastName) {
+
+//     // функция-помощник, которую мы используем ниже
+//     function getFullName() {
+//         return firstName + " " + lastName;
+//     }
+
+//     console.log("Hello, " + getFullName());
+//     console.log("Bye, " + getFullName());
+
+// }
+
+// sayHiBye('Dima', 'Kovalenko')
+
+// function makeCounter() {
+//     let count = 0;
+
+//     return () => {
+//       return count++; // есть доступ к внешней переменной "count"
+//     };
+//   }
+
+//   let counter = makeCounter();
+//   let counter2 = makeCounter();
+
+//   console.log(counter())
+//   console.log(counter())
+//   console.log(counter2())
+
+// let phrase = "Hello";
+
+// if (true) {
+//   let user = "John";
+
+//   function sayHi() {
+//     console.log(`${phrase}, ${user}`);
+//   }
+//   sayHi();
+// }
+
+
+// function sum(a) {
+//     return function(b) {
+//         return a + b;
+//     }
+// };
+
+// console.log(sum(1)(2));
+
+
+// let array = [1, 2, 3, 4, 5, 6, 7];
+
+// function inBetween(from,to) {
+//     return 
+// }
+
+// function inArray(arr) {
+
+// }
+
+// function makeWorker() {
+//   let name = "Pete";
+
+//   return function() {
+//     console.log(name);
+//   };
+// }
+
+// let name = "John";
+
+// // create a function
+// let work = makeWorker();
+
+// // call it
+// console.log(work())
+
+
+// let name1 = 'Alex';
+// let name2 = 'Dima';
+
+
+// function changeName(n2) {
+//     name1 = 'Vasya';
+//     n2 = 'Kate';
+// }
+// changeName(name2);
+// console.log(name1 , name2)
+
+
+// function makeCounter() {
+//     let count = 0;
+//     return function() {
+//         count++;
+//         return count;
+//     }
+// }
+
+// let counter1 = makeCounter();
+// let counter2 = makeCounter();
+
+// counter1();
+// counter1();
+// counter1();
+
+// counter2();
+
+// console.log(counter1())
+// console.log(counter2())
+
