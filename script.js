@@ -1605,3 +1605,181 @@
 // console.log(counter1())
 // console.log(counter2())
 
+// function getUser(firstname, lastname) {
+//     function getFullNameUser() {
+//         return firstname + ' ' + lastname;
+//     }
+//     console.log(getFullNameUser())
+// }
+// const user1 = getUser('Maria', 'Conovalova');
+// const user2 = getUser('Dima', 'Kovalenko');
+
+// function User() {
+//     this.userName = prompt()
+//     this.sayHi = () => {
+//         alert(`Hi ${this.userName}`)
+//         console.log(this)
+//     }
+//     this.getAge = function() {
+//         console.log(this)
+//         return () => {
+//             console.log(this)
+//             return null
+//         }
+//     }
+// }
+
+// const newUser = new User();
+
+// newUser.sayHi();
+// newUser.getAge();
+
+// const newThis = newUser.getAge()
+
+// console.log(newThis());
+
+// function makeArmy() {
+//     let shooters = [];
+
+//     // let i = 0;
+//     // while (i < 10) {
+//     //   let shooter = function() { // функция shooter
+//     //     alert( i ); // должна выводить порядковый номер
+//     //   };
+//     //   shooters.push(shooter);
+//     //   i++;
+//     // }
+//     for(let i = 0; i < 10; i++) {
+//         shooters.push(i)
+//     }
+
+//     return shooters;
+//   }
+
+//   let army = makeArmy();
+
+//   console.log(army)
+
+
+// function sayHi() {
+//     console.log("Hi");
+
+//     // давайте посчитаем, сколько вызовов мы сделали
+//     sayHi.counter++;
+// }
+// sayHi.counter = 0; // начальное значение
+
+//   sayHi(); // Hi
+//   sayHi(); // Hi
+
+//   console.log( `Вызвана ${sayHi.counter} раза` );
+
+// let sayHi = function func(who) {
+//     if (who) {
+//       console.log(`Hello, ${who}`);
+//     } else {
+//       sayHi("Guest"); // Теперь всё в порядке
+//     }
+//   };
+
+//   let welcome = sayHi;
+// //   sayHi = null;
+
+//   welcome(); 
+//   welcome();
+
+
+
+//   function makeCounter() {
+//     let count = 0;
+
+//     function counter() {
+//         return count++;
+//     }
+//     counter.set = (value) => count = value;
+//     counter.decrease = () => count--;
+
+//     return counter
+//   }
+
+//   let counter = makeCounter();
+
+//   console.log( counter() ); // 0
+//   console.log( counter() ); // 1
+
+//   counter.set(10); // установить новое значение счётчикаs
+
+//   console.log( counter() ); // 10
+
+//   counter.decrease(); // уменьшить значение счётчика на 1
+
+//   console.log( counter() ); // 10 (вместо 11)
+
+// let func = new Function('a,b,c' , 'return a,b,c');
+
+
+// let who = function hi(who) {
+
+//     if(who) {
+//         console.log(`go ${who}`)
+//     } else {
+//         console.log('go bro')
+//     }
+// }
+
+// who()
+
+// function getValue() {
+//     let val = 1111;
+//     console.log(val)
+// }
+
+// let val = '13';
+
+// getValue()
+
+// function time(min, sec) {
+//     console.log(`Now ${min} minutes ${sec} seconds`)
+// }
+
+// setInterval(time,2000,'15','03')
+// let i = 0;
+// function run() {
+//     i++;
+//     if(i > 10) return i;
+//     console.log(i)
+//     setTimeout(run,1000)
+// }
+
+// const time = setTimeout(run,1000);
+
+// function printNumbers(from, to) {
+//     let cur = from;
+//     function go() {
+//         console.log(cur);
+//         if(cur == to) {
+//             clearInterval(timerId)
+//         }
+//         cur++;
+//     };
+
+//     go();
+//     let timerId = setInterval(go, 1000);
+// }
+
+// printNumbers(0, 60);
+
+// function printNumbers(from, to) {
+//     let cur = from;
+
+//     function go() {
+//         console.log(cur);
+//         if(cur < to) {
+//             setTimeout(go, 1000);
+//         }
+//         cur++;
+//     }
+//     setTimeout(go)
+// }
+
+// printNumbers(1,10)
