@@ -1783,3 +1783,15 @@
 // }
 
 // printNumbers(1,10)
+
+// let map = new Map();
+// map.set('banana', 1);
+// map.set('orange', 2);
+// map.set('meat', 4);
+// map.set({o : 'a'} , '13')
+
+// console.log(map.entries())
+
+
+
+// console.log(Object.fromEntries(map.entries()))
