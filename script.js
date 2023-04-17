@@ -1795,3 +1795,173 @@
 
 
 // console.log(Object.fromEntries(map.entries()))
+
+// function a() {
+//     return this.name;
+// }
+
+// let obj = {
+//     name : 'Alice',
+// }
+
+// console.log(a.call(obj));
+
+// function slow(x) {
+//     console.log(`Called with ${x}`);
+//     return x;
+// }
+
+// function cachingDecorator(func) {
+//     let cache = new Map();
+
+//     return function(x) {
+//         if(cache.has(x)) {
+//             return cache.get(x)
+//         }
+
+//         let result = func(x);
+
+//         cache.set(x , result)
+
+//         return result;
+//     }
+// }
+
+// slow = cachingDecorator(slow);
+
+// console.log(slow());
+
+
+// function slow(x) {
+//     // здесь могут быть ресурсоёмкие вычисления
+//     console.log(`Called with ${x}`);
+//     return x;
+//   }
+  
+//   function cachingDecorator(func) {
+//     let cache = new Map();
+  
+//     return function(x) {
+//       if (cache.has(x)) {    // если кеш содержит такой x,
+//         return cache.get(x); // читаем из него результат
+//       }
+  
+//       let result = func(x); // иначе, вызываем функцию
+  
+//       cache.set(x, result); // и кешируем (запоминаем) результат
+//       return result;
+//     };
+//   }
+  
+//   slow = cachingDecorator(slow);
+  
+//   console.log( slow(1) ); // slow(1) кешируем
+//   console.log( "Again: " + slow(1) ); // возвращаем из кеша
+  
+//   console.log( slow(2) ); // slow(2) кешируем
+//   console.log( "Again: " + slow(2) ); // возвращаем из кеша
+
+//   console.log(slow(6))
+//   console.log(slow(6))
+//   console.log(slow(6))
+//   console.log(slow(1))
+//   console.log(slow(5))
+//   console.log(slow([1,2,3,4]))
+//   console.log(slow({1: '12331'}))
+
+// const o = {
+//     a : 1,
+
+//     b(x) {
+//         return this.a + x
+//     }
+// };
+
+// let ab = o.b;
+
+// console.log(ab.call(o, 2))
+
+// function callC() {
+//     console.log(this.name)
+// }
+
+// let o = {
+//     name: 'Dima',
+// }
+
+// let o2 = {
+//     name: 'Kate'
+// }
+
+// callC.call(o);
+// callC.call(o2);
+
+// function c(x,y) {
+//     return x + y + this.a;
+// }
+
+// let o = {
+//     a : 1,
+// }
+
+// console.log(c.call(o, 1, 2))
+// console.log(c.apply(o, [2,2,3,4]))
+
+// function work(a, b) {
+//     alert( a + b ); // произвольная функция или метод
+//   }
+
+//   function spy(func) {
+    
+//   }
+  
+//   work = spy(work);
+  
+//   work(1, 2); // 3
+//   work(4, 5); // 9
+  
+//   for (let args of work.calls) {
+//     alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
+//   }
+
+// let user = {
+//   firstName: "Вася",
+//   sayHi() {
+//     console.log(`Привет, ${this.firstName}!`);
+//   }
+// };
+
+// setTimeout(user.sayHi.bind(user), 1000);  
+
+function partial(func, ...argsBound) {
+  return function(...args) { // (*)
+    return func.call(this, ...argsBound, ...args);
+  }
+}
+
+// использование:
+let user = {
+  firstName: "John",
+  say(time, phrase) {
+    console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+  }
+};
+
+let user2 = {
+  firstName: "Alex",
+  say(time, phrase) {
+    console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+  }
+};
+
+// добавляем частично применённый метод с фиксированным временем
+user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+
+user.sayNow("Hello");
+
+user2.sayNow = partial(user2.say, new Date().getHours() + ':' + new Date().getMinutes());
+
+user2.sayNow('Hi!');
+
+
+
