@@ -1933,35 +1933,69 @@
 
 // setTimeout(user.sayHi.bind(user), 1000);  
 
-function partial(func, ...argsBound) {
-  return function(...args) { // (*)
-    return func.call(this, ...argsBound, ...args);
-  }
-}
+// function partial(func, ...argsBound) {
+//   return function(...args) { // (*)
+//     return func.call(this, ...argsBound, ...args);
+//   }
+// }
 
 // использование:
+// let user = {
+//   firstName: "John",
+//   say(time, phrase) {
+//     console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+//   }
+// };
+
+// let user2 = {
+//   firstName: "Alex",
+//   say(time, phrase) {
+//     console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+//   }
+// };
+
+// // добавляем частично применённый метод с фиксированным временем
+// user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+
+// user.sayNow("Hello");
+
+// user2.sayNow = partial(user2.say, new Date().getHours() + ':' + new Date().getMinutes());
+
+// user2.sayNow('Hi!');
+
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?", '');
+//   if (password == "rockstar") ok();
+//   else fail();
+// }
+
+// let user = {
+//   name: 'Вася',
+
+//   loginOk() {
+//     alert(`${this.name} logged in`);
+//   },
+
+//   loginFail() {
+//     alert(`${this.name} failed to log in`);
+//   },
+
+// };
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+
 let user = {
-  firstName: "John",
-  say(time, phrase) {
-    console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+  name: 'John',
+
+  login(result) {
+    alert( this.name + (result ? ' logged in' : ' failed to log in') );
   }
 };
 
-let user2 = {
-  firstName: "Alex",
-  say(time, phrase) {
-    console.log(`[${time}] ${this.firstName}: ${phrase}!`);
-  }
-};
-
-// добавляем частично применённый метод с фиксированным временем
-user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
-
-user.sayNow("Hello");
-
-user2.sayNow = partial(user2.say, new Date().getHours() + ':' + new Date().getMinutes());
-
-user2.sayNow('Hi!');
-
-
-
+askPassword(user.login.bind(user, true), user.login.bind(user, false) );
