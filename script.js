@@ -1984,18 +1984,71 @@
 
 // askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
-function askPassword(ok, fail) {
-  let password = prompt("Password?", '');
-  if (password == "rockstar") ok();
-  else fail();
-}
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?", '');
+//   if (password == "rockstar") ok();
+//   else fail();
+// }
 
-let user = {
-  name: 'John',
+// let user = {
+//   name: 'John',
 
-  login(result) {
-    alert( this.name + (result ? ' logged in' : ' failed to log in') );
-  }
-};
+//   login(result) {
+//     alert( this.name + (result ? ' logged in' : ' failed to log in') );
+//   }
+// };
 
-askPassword(user.login.bind(user, true), user.login.bind(user, false) );
+// askPassword(user.login.bind(user, true), user.login.bind(user, false) );
+
+// let user = {
+//     name: 'Alex',
+//     hello() {
+//         console.log(`Hello, ${this.name}`)
+//     },
+//     hi() {
+//         return () => {
+//             return this
+//         }
+//     }
+// }
+
+// user.hello()
+
+// console.log(user.hi()())
+
+// let o = {
+//     name: 'Alex',
+//     age: 22,
+// }
+
+// let descriptor = Object.getOwnPropertyDescriptor(o, 'name');
+
+// console.log(descriptor)
+
+// Object.defineProperty(o, 'name' , { writable: false});
+
+// console.log(
+//     Object.getOwnPropertyDescriptor(o, 'name')
+// )
+
+// let user = {};
+
+// Object.defineProperty(user , 'name', {
+//     value: '100',
+//     writable: false,
+//     enumerable: true,
+//     configurable: true,
+// })
+
+// console.log(user);
+
+// console.log(Object.getOwnPropertyDescriptor(user , 'name'));
+
+// const o = {
+//     game: 'dota2',
+//     user: 'Alex',
+//     age: 15,
+// };
+
+// console.log(Object.entries(o).forEach(i => console.log(i[0])));
+
