@@ -2052,3 +2052,10 @@
 
 // console.log(Object.entries(o).forEach(i => console.log(i[0])));
 
+// Object.freeze(o);
+
+// console.log(Object.isFrozen(o));
+
+// Object.freeze(o);
+
+// console.log(Object.isFrozen(o))
