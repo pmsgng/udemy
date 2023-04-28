@@ -1837,27 +1837,27 @@
 //     console.log(`Called with ${x}`);
 //     return x;
 //   }
-  
+
 //   function cachingDecorator(func) {
 //     let cache = new Map();
-  
+
 //     return function(x) {
 //       if (cache.has(x)) {    // если кеш содержит такой x,
 //         return cache.get(x); // читаем из него результат
 //       }
-  
+
 //       let result = func(x); // иначе, вызываем функцию
-  
+
 //       cache.set(x, result); // и кешируем (запоминаем) результат
 //       return result;
 //     };
 //   }
-  
+
 //   slow = cachingDecorator(slow);
-  
+
 //   console.log( slow(1) ); // slow(1) кешируем
 //   console.log( "Again: " + slow(1) ); // возвращаем из кеша
-  
+
 //   console.log( slow(2) ); // slow(2) кешируем
 //   console.log( "Again: " + slow(2) ); // возвращаем из кеша
 
@@ -1912,14 +1912,14 @@
 //   }
 
 //   function spy(func) {
-    
+
 //   }
-  
+
 //   work = spy(work);
-  
+
 //   work(1, 2); // 3
 //   work(4, 5); // 9
-  
+
 //   for (let args of work.calls) {
 //     alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
 //   }
@@ -2058,4 +2058,70 @@
 
 // Object.freeze(o);
 
-// console.log(Object.isFrozen(o))
+// console.log(Object.isFrozen(o));
+
+// let user = {
+//     name: 'Alex',
+//     surname: 'Badalov',
+
+//     get fullName() {
+//         return `${this.name} ${this.surname}`
+//     }
+// }
+
+// console.log(user.fullName)
+
+// console.log('asdasd a'.split('s'))
+
+
+
+// let user = {
+//     get name() {
+//         return this._name;
+//     },
+
+//     set name(value) {
+//         if (value.length <= 4) {
+//             console.log("Имя слишком короткое, должно быть более 4 символов");
+//             return;
+//         }
+//         this._name = value;
+//     }
+// };
+
+// user.name = 'Alex'
+// console.log(user.name);
+
+
+
+
+
+
+// let animal = {
+//     eats: true,
+//     walk() {
+//       console.log("Animal walk");
+//       return null;
+//     }
+//   };
+  
+//   let rabbit = {
+//     jumps: true,
+//     __proto__: animal,
+//   };
+//   rabbit.__proto__ = animal;
+  
+//   // walk взят из прототипа
+//   rabbit.walk();
+
+// const name = {
+//     name: 'Alex',
+// }
+
+// const surName = {
+//     surname: 'Badalov',
+// }
+
+// Object.setPrototypeOf(name , surName);
+
+// console.log(name.surname); // surname прототип ! 
