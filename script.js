@@ -2104,13 +2104,13 @@
 //       return null;
 //     }
 //   };
-  
+
 //   let rabbit = {
 //     jumps: true,
 //     __proto__: animal,
 //   };
 //   rabbit.__proto__ = animal;
-  
+
 //   // walk взят из прототипа
 //   rabbit.walk();
 
@@ -2125,3 +2125,221 @@
 // Object.setPrototypeOf(name , surName);
 
 // console.log(name.surname); // surname прототип ! 
+
+
+// let user = {
+//     name: 'Alex',
+//     surname: 'Badalov',
+
+//     set fullName(val) {
+//         [this.name, this.surname] = val.split(' ')
+//     },
+
+//     get fullName() {
+//         return `${this.name} ${this.surname}`
+//     },
+// }
+
+// let admin = {
+//     __proto__: user,
+//     isAdmin: true,
+// }
+
+// console.log(admin.fullName)
+// admin.fullName = 'Kate Gavrilova';
+// console.log(admin.fullName);
+
+// const timer = {
+//     count : 0,
+//     plus() {
+//         this.count++;
+//     }
+// }
+
+// const timer2 = {
+//     count: 0,
+//     __proto__: timer,
+// }
+
+// const timer3 = {
+//     count: 0,
+//     __proto__: timer,
+// }
+
+// timer2.plus();
+// timer2.plus();
+// console.log(timer2.count)
+// timer3.plus();
+// console.log(timer.count)
+// console.log(timer3.count)
+
+// for(let prop in timer2) {
+//     // console.log(prop)
+//     let isOwn = timer2.hasOwnProperty(prop);
+//     console.log(isOwn)
+// }
+
+// function F(name) {
+//     this.name = name;
+// }
+
+// let f = new F('alex');
+
+
+
+// let hamster = {
+//     stomach: [],
+//     eat(food) {
+//         this.stomach.push(food);
+//     }
+// };
+
+// let speedy = {
+//     stomach: [],
+//     __proto__: hamster
+// };
+
+// let lazy = {
+//     stomach: [],
+//     __proto__: hamster
+// };
+
+
+// speedy.eat("apple");
+// speedy.eat('cherry');
+// console.log(speedy)
+
+
+// lazy.eat('banana');
+// lazy.eat('mashroom')
+// console.log(lazy)
+
+// let user = {
+//     name: 'Alex'
+// }
+
+// Object.defineProperty(user, 'name' , {
+//     writable: false,
+// })
+
+// // user.name = 'Sasha'
+// delete user.name;
+
+// console.log(user)
+
+// function User(name, birthday) {
+//     this.name = name,
+//     this.birthday = birthday,
+
+//     Object.defineProperty(this, 'age', {
+//         get() {
+//             let todayYear = new Date().getFullYear();
+//             console.log(todayYear)
+//             return todayYear - this.birthday.getFullYear()
+//         }
+//     })
+// }
+
+// let alex = new User('Alex', new Date(1992, 6, 1))
+
+// console.log(alex.birthday)
+// console.log(alex.age)
+
+// function Car(car, age) {
+//     this.car = car
+//     this.age = age
+// }
+
+
+// let kia = new Car('Kia', '2 years');
+
+// let btnsHeader = document.querySelectorAll('.header__navbar-item');
+
+// btnsHeader.forEach(btn => {
+//     btn.addEventListener('click' , () => {
+//         alert('hi   ')
+//     })
+// });
+
+// let head = {
+//     glasses: 1
+//   };
+  
+//   let table = {
+//     pen: 3,
+//     __proto__: head,
+//   };
+  
+//   let bed = {
+//     sheet: 1,
+//     pillow: 2,
+//     __proto__: table,
+//   };
+  
+//   let pockets = {
+//     money: 2000,
+//     __proto: bed,
+//   };
+
+// function Rabbit(name) {
+//     this.name = name;
+//     console.log(name);
+// }
+
+// let rabbit = new Rabbit('Alex');
+
+// let rabbit2 = new rabbit.constructor('Dima');
+
+// console.log(rabbit2)
+
+
+// let animalBelka = {
+//     name: 'belka',
+// };
+
+// let animalDog = { 
+//     name: 'dog',
+// };
+
+// function Cat() {};
+
+// Cat.prototype = animalDog;
+
+// let cat = new Cat();
+
+// console.log(cat.name);
+
+// function User(name) {
+//     this.name = name;
+// }
+
+// let user = new User('Alex');
+
+// let user2 = new user.constructor('Kate');
+
+// console.log(user2.name)
+
+// console.log(Array.prototype)
+
+// let obj = {
+//     a: 3,
+// }
+
+// console.log(obj)
+
+let animal = {
+    name: 'zayac',
+    isEat: true,
+    go() {
+        console.log('Its walk!')
+    }
+};
+
+let animal2 = {
+    name: 'belka',
+    isEat: false,
+};
+
+animal2.__proto__ = animal;
+
+animal2.go();
