@@ -2264,18 +2264,18 @@
 // let head = {
 //     glasses: 1
 //   };
-  
+
 //   let table = {
 //     pen: 3,
 //     __proto__: head,
 //   };
-  
+
 //   let bed = {
 //     sheet: 1,
 //     pillow: 2,
 //     __proto__: table,
 //   };
-  
+
 //   let pockets = {
 //     money: 2000,
 //     __proto: bed,
@@ -2327,19 +2327,309 @@
 
 // console.log(obj)
 
-let animal = {
-    name: 'zayac',
-    isEat: true,
-    go() {
-        console.log('Its walk!')
-    }
-};
+// let animal = {
+//     name: 'zayac',
+//     isEat: true,
+//     go() {
+//         console.log('Its walk!')
+//     }
+// };
 
-let animal2 = {
-    name: 'belka',
-    isEat: false,
-};
+// let animal2 = {
+//     name: 'belka',
+//     isEat: false,
+// };
 
-animal2.__proto__ = animal;
+// animal2.__proto__ = animal;
 
-animal2.go();
+// animal2.go();
+
+// let animal = {
+//     sleep() {
+//         this.isSleeping = true;
+//     },
+
+//     walk() {
+//         if (!this.isSleeping) {
+//             console.log('I walk');
+//         } else {
+//             console.log('I sleep')
+//         }
+//     },
+// };
+
+// let rabbit = {
+//     name: 'White Rabbit',
+//     __proto__: animal,
+// };
+
+// rabbit.sleep();
+
+// rabbit.walk();
+
+// let a = {
+//     name: 'Alice',
+//     isAdmin: true,
+// };
+
+// let b = {
+//     name: 'Dima',
+//     __proto__: a,
+// }
+
+
+// for(let prop in b) {
+//     let isOne = Object.hasOwn(b, prop);
+
+//     if(isOne) {
+//         console.log(`This one b prop: ${prop}`)
+//     } else {
+//         console.log(`Inherited prop: ${prop}`)
+//     }
+// };
+
+// function User(name) {
+//     this.name = name;
+// }
+
+// let user = new User('Kate');
+
+// let user2 = new user.constructor('Dima');
+
+// console.log(user, user2);
+
+
+// function Rabbit() {}
+// Rabbit.prototype = {
+//   eats: true
+// };
+
+// let rabbit = new Rabbit(); // конструктор вызван и свойство установлены в объекте
+
+// Rabbit.prototype = {};
+
+// let rabbit2 = new Rabbit();
+// console.log(rabbit.__proto__)
+// console.log( rabbit.eats );
+// console.log(rabbit2.__proto__)
+
+// function Rabbit(name) {
+//     this.name = name;
+// }
+// Rabbit.prototype = {
+//   eats: true
+// };
+
+// let rabbit = new Rabbit('Pete');
+// console.log(rabbit)
+// console.log(rabbit.__proto__)
+// console.log(rabbit.eats)
+
+// Rabbit.prototype.eats = false;
+
+// console.log( rabbit.eats ); 
+
+// function User() {};
+
+// User.prototype = {
+//     isAdmin: true,
+// };
+
+// let user = new User();
+
+// User.prototype = {
+//     isAdmin: 'what'
+// }
+// console.log(user.isAdmin) //true 
+
+
+// let user2 = new User();
+
+// console.log(user2.isAdmin) //what
+
+// User.prototype.isAdmin = false;
+
+// console.log(user.isAdmin)
+// console.log(user2.isAdmin)
+// console.log(User.prototype)
+
+// function Obj(){};
+
+// let obj = new Obj();
+
+// let obj2 = new obj.constructor();
+
+
+// function User(name) {
+//     this.name = name;
+// }
+
+// let user = new User('Alex');
+
+// let user2 = new user.constructor('Dima');
+
+// console.log(user);
+// console.log(user2);
+
+// console.log([1,2,3])
+
+// String.prototype.sayHi = function() {
+//     console.log('Hello world!')
+// }
+
+// '.'.sayHi();
+
+// if (!String.prototype.repeat) { // Если такого метода нет
+//     // добавляем его в прототип
+
+//     String.prototype.repeat = function(n) {
+//       // повторить строку n раз
+
+//       // на самом деле код должен быть немного более сложным
+//       // (полный алгоритм можно найти в спецификации)
+//       // но даже неполный полифил зачастую достаточно хорош для использования
+//       return new Array(n + 1).join();
+//     };
+//   }
+
+//   console.log( "La".repeat(3) );
+
+// const o = {
+//     _name: 'Pete',
+//     get name() {
+//         return this._name
+//     },
+//     set name(value) {
+//         this._name = value
+//     },
+// }
+
+// console.log(o.name)
+// o.name = 'Alex';
+
+// console.log(o.name)
+
+// function f() {
+//     console.log("Hello!");
+// }
+
+// Function.prototype.defer = function(ms) {
+//     setTimeout(this, ms);
+// }
+
+// f.defer(2000);
+
+// function f(a, b) {
+//     console.log(a + b);
+// }
+
+// Function.prototype.defer = function(time) {
+//     let thisFunc = this;
+//     return function(a,b) {
+//         setTimeout(() => {
+//             thisFunc(a,b)
+//         },time)
+//     }
+// }
+
+// f.defer(1000)(2, 2);
+
+// function Car(brand,year) {
+//     this.brand = brand;
+//     this.year = year;
+//     this.go = () => {
+//         console.log('Go ' + this.brand)
+//     }
+// };
+
+// // const mercedes = new Car('Mercedes' , 2020);
+
+// // console.log(mercedes)
+// const car = new Car('Mercedes', 2020);
+
+// car.go()
+
+// function Rabbit(name) {
+//     this.name = name;
+// }
+// Rabbit.prototype.sayHi = function () {
+//     console.log(this.name);
+// };
+
+// let rabbit = new Rabbit("Rabbit");
+
+// rabbit.sayHi();
+
+// Rabbit.prototype.sayHi();
+
+// class Clock {
+//     constructor({template}) {
+//         this.template = template;
+//     }
+
+//     render() {
+//         let date = new Date();
+
+//         let hours = date.getHours();
+//         if(hours < 10) hours = "0" + hours;
+
+//         let mins = date.getMinutes();
+//         if(mins < 10) mins = '0' + mins;
+
+//         let secs = date.getSeconds();
+//         if (secs < 10) secs = '0' + secs;
+
+//         let output = this.template
+//         .replace('h', hours)
+//         .replace('m', mins)
+//         .replace('s', secs);
+  
+//       console.log(output);
+//     }
+  
+//     stop () {
+//       clearInterval(this.timer);
+//     };
+  
+//     start () {
+//       this.render();
+//       this.timer = setInterval(() => this.render(), 1000);
+//     };
+  
+// }
+
+// let clock = new Clock({template: 'h:m:s'});
+
+// // clock.start();
+
+// // setInterval(() => clock.stop(), 10001);
+
+// let date = new Date();
+
+// const month = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
+
+// console.log(`Today ${date.getDate()} ${month[date.getMonth()]}`)
+
+class Animal {
+  constructor(name, age, animal) {
+    this.name = name;
+    this.age = age;
+    this.animal = animal;
+  }
+  go() {
+    console.log(`${this.name}, lets go!`)
+  }
+}
+
+class Cat extends Animal {
+  constructor(name,age,animal) {
+    super(name,age,animal)
+  }
+  sayMiy() {
+    console.log(`Miyyyy, I'm ${this.animal}`)
+  }
+}
+
+let cat = new Cat('Alex', 7 ,'Cat');
+
+console.log(cat.sayMiy())
