@@ -2610,26 +2610,75 @@
 
 // console.log(`Today ${date.getDate()} ${month[date.getMonth()]}`)
 
-class Animal {
-  constructor(name, age, animal) {
+// class Animal {
+//   constructor(name, age, animal) {
+//     this.name = name;
+//     this.age = age;
+//     this.animal = animal;
+//   }
+//   go() {
+//     console.log(`${this.name}, lets go!`)
+//   }
+// }
+
+// class Cat extends Animal {
+//   constructor(name,age,animal) {
+//     super(name,age,animal)
+//   }
+//   sayMiy() {
+//     console.log(`Miyyyy, I'm ${this.animal}`)
+//   }
+// }
+
+// let cat = new Cat('Alex', 7 ,'Cat');
+
+// console.log(cat.sayMiy())
+
+// class CatDog extends Cat {
+//   constructor(name,age,animal) {
+//     super(name,age,animal)
+//   }
+//   isDogCat() {
+//     console.log('Who are you?')
+//   }
+// }
+
+// let catDog = new CatDog('Pete',12,'Cat-Dog');
+
+// console.log(catDog.sayMiy());
+// catDog.isDogCat()
+
+
+
+class User {
+  constructor(name,age,password) {
     this.name = name;
-    this.age = age;
-    this.animal = animal;
+    this.age = age
+    this.password = password
   }
-  go() {
-    console.log(`${this.name}, lets go!`)
-  }
-}
-
-class Cat extends Animal {
-  constructor(name,age,animal) {
-    super(name,age,animal)
-  }
-  sayMiy() {
-    console.log(`Miyyyy, I'm ${this.animal}`)
+  isAdmin() {
+    if(this.name == 'Admin' || this.name == 'admin' || this.name == 'Vlad') {
+      console.log('Welcome,admin!')
+    } else {
+      console.log('You need administrator rights!')
+    }
   }
 }
 
-let cat = new Cat('Alex', 7 ,'Cat');
+let user = new User('Alex', 22, 'qwerty123456');
 
-console.log(cat.sayMiy())
+class Admin extends User {
+  constructor(name,age,password) {
+    super(name,age,password)
+  }
+  getPassword(user) {
+    console.log(`${user.password} - pass of user ${user.name}`)
+  }
+}
+
+let admin = new Admin('Vlad', 25 , '03041996');
+
+admin.getPassword(user)
+
+admin.isAdmin()
+user.isAdmin()  
