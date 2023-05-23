@@ -2650,35 +2650,68 @@
 
 
 
-class User {
-  constructor(name,age,password) {
-    this.name = name;
-    this.age = age
-    this.password = password
-  }
-  isAdmin() {
-    if(this.name == 'Admin' || this.name == 'admin' || this.name == 'Vlad') {
-      console.log('Welcome,admin!')
-    } else {
-      console.log('You need administrator rights!')
-    }
-  }
-}
+// class User {
+//   constructor(name,age,password) {
+//     this.name = name;
+//     this.age = age
+//     this.password = password
+//   }
+//   isAdmin() {
+//     if(this.name == 'Admin' || this.name == 'admin' || this.name == 'Vlad') {
+//       console.log('Welcome,admin!')
+//     } else {
+//       console.log('You need administrator rights!')
+//     }
+//   }
+// }
 
-let user = new User('Alex', 22, 'qwerty123456');
+// let user = new User('Alex', 22, 'qwerty123456');
 
-class Admin extends User {
-  constructor(name,age,password) {
-    super(name,age,password)
-  }
-  getPassword(user) {
-    console.log(`${user.password} - pass of user ${user.name}`)
-  }
-}
+// class Admin extends User {
+//   constructor(name,age,password) {
+//     super(name,age,password)
+//   }
+//   getPassword(user) {
+//     console.log(`${user.password} - pass of user ${user.name}`)
+//   }
+// }
 
-let admin = new Admin('Vlad', 25 , '03041996');
+// let admin = new Admin('Vlad', 25 , '03041996');
 
-admin.getPassword(user)
+// admin.getPassword(user)
 
-admin.isAdmin()
-user.isAdmin()  
+// admin.isAdmin()
+// user.isAdmin()  
+
+// class User {
+//   constructor(name, age, male) {
+//     this.name = name
+//     this.age = age
+//     this.male = male;
+//   }
+// }
+
+// class InstaUser extends User {
+//   constructor(name, age, male, socialNetwork) {
+//     super(name, age, male)
+//     this.socialNetwork = socialNetwork
+//   }
+//   get userName() {
+//     return this.name
+//   }
+
+//   set userName(name) {
+//     this.name = name
+//   }
+// }
+
+// const userIvan = new User('Ivan' , 22, 'male');
+
+// const instaUserPeter = new InstaUser('Peter', 18, 'male', 'Instagram');
+
+// console.log(userIvan);
+// console.log(instaUserPeter);
+
+// userIvan.name = 'Alex';
+
+// console.log(userIvan)
