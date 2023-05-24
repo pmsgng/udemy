@@ -2715,3 +2715,67 @@
 // userIvan.name = 'Alex';
 
 // console.log(userIvan)
+
+// class Component {
+//     constructor(selector) {
+//         this.$el = document.querySelector(selector)
+//     }
+
+//     hide() {
+//         this.$el.style.display = 'none'
+//     }
+
+//     show() {
+//         this.$el.style.display = 'block'
+//     }
+// }
+
+// class Box extends Component {
+//     constructor(options) {
+//         super(options.selector)
+
+//         this.$el.style.width = this.$el.style.height = options.size + 'px'
+//         this.$el.style.background = options.color
+//         this.$el.style.display = options.display
+//     }
+// }
+
+// const box1 = new Box({
+//     selector: '.main__block',
+//     size: 100,
+//     color: 'red',
+//     display: 'block'
+// });
+
+
+// const btn = document.querySelector('.main__btn');
+
+// btn.addEventListener('click', () => {
+//     if(box1.$el.style.display == 'block') {
+//         box1.hide()
+//     } else {
+//         box1.show()
+//     }
+    
+//     if(circle1.$el.style.display == 'none') {
+//         circle1.show()
+//     } else {
+//         circle1.hide()
+//     }
+// })
+
+
+// class Circle extends Box {
+//     constructor(options) {
+//         super(options)
+
+//         this.$el.style.borderRadius = '3rem'
+//     }
+// }
+
+// const circle1 = new Circle({
+//     selector: '.main__circle',
+//     size: 100,
+//     color: 'gray',
+//     display: 'none',
+// })
