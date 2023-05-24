@@ -2779,3 +2779,79 @@
 //     color: 'gray',
 //     display: 'none',
 // })
+
+// class CoffeeMachine {
+//     _waterAmount = 0; // количество воды внутри
+
+//     set waterAmount(value) {
+//         if(value < 0) throw new Error('Отрицательное значение воды')
+//         this._waterAmount = value
+//     }
+
+//     get waterAmount() {
+//         return this._waterAmount;
+//     }
+  
+//     constructor(power) {
+//       this.power = power;
+//       console.log( `Создана кофеварка, мощность: ${power}` );
+//     }
+  
+//   }
+  
+//   // создаём кофеварку
+//   let coffeeMachine = new CoffeeMachine(100);
+  
+//   // добавляем воды
+//   coffeeMachine.waterAmount = 200;
+
+// class CoffeeMachine {
+
+//     #waterAmount = 0;
+  
+//     get waterAmount() {
+//       return this.#waterAmount;
+//     }
+  
+//     set waterAmount(value) {
+//       if (value < 0) throw new Error("Отрицательный уровень воды");
+//       this.#waterAmount = value;
+//     }
+//   }
+  
+//   let machine = new CoffeeMachine();
+
+
+//   class User {
+//     #userAge = 18;
+
+//     get userAge() {
+//         if(this.#userAge > 17) {
+//             return this.#userAge
+//         } else {
+//             return `User age shuld be ${this.#userAge} y.o. or more than ${this.#userAge} y.o.!`
+//         }
+//     }
+
+//     set userAge(value) {
+//         if(value < 18) {
+//             return console.log('So young!')
+//         } else {
+//             this.#userAge = value;
+//         }
+//     }
+//     constructor(options) {
+//         this.name = options.name
+//         this.male = options.male
+//     }
+//   }
+
+// let user1 = new User({
+//     name: 'Max',
+//     male: 'Male'
+// })
+
+// console.log(user1.userAge)
+// user1.userAge = 10;
+// user1.userAge = 19;
+// console.log(user1.userAge)
