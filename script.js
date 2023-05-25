@@ -2934,3 +2934,53 @@
 //   } catch (e) {
 //     console.log( "Внешний catch поймал: " + e ); // поймал!
 //   }
+
+// function a(name, callback) {
+//     console.log(name);
+//     callback();
+// }
+
+// a('Kate done', () => console.log('second fnn done'))
+
+// let promise = new Promise((res, rej) => {
+//     setTimeout( () => {
+//         console.log(res('done')) 
+//     }, 100)
+// })
+
+// let promise = new Promise(function(resolve, reject) {
+//     // эта функция выполнится автоматически, при вызове new Promise
+  
+//     // через 1 секунду сигнализировать, что задача выполнена с результатом "done"
+//     setTimeout(() => resolve("done"), 1000);
+//   });
+
+// new Promise((resolve, reject) => {
+//     throw new Error("error");
+//   })
+//     .finally(() => console.log("Промис завершён")) // срабатывает первым
+//     .catch(err => console.log(err.name));
+
+// function delay(ms) {
+//     // ваш код
+//     return new Promise(res => setTimeout(res, ms))
+//   }
+  
+//   delay(3000).then(() => console.log('выполнилось через 3 секунды'));
+
+let promise = new Promise(res => {
+    setTimeout(() => res([1,2,3]),2000)
+})
+
+
+let promise2 = new Promise(res => {
+    setTimeout(() => res('good'),1500)
+})
+
+let promise3 = new Promise(rej => {
+    setTimeout(() => rej(new Error('Ooooops!')),5000) 
+})
+
+Promise.all([promise,promise2,promise3])
+.then(data => data.forEach(i => console.log( i)))
+.catch(err => console.log(err))
