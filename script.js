@@ -2747,6 +2747,7 @@
 //     display: 'block'
 // });
 
+// console.log(box1)
 
 // const btn = document.querySelector('.main__btn');
 
@@ -2855,3 +2856,81 @@
 // user1.userAge = 10;
 // user1.userAge = 19;
 // console.log(user1.userAge)
+
+// const o1 = {
+//     a:1
+// }
+
+// const o2 = {
+//     b:2
+
+// }
+
+// const o3 = {
+//     c:3,
+//     d: {
+//         e: 4,
+//         f: 5,
+//         g: {
+//             h: () => console.log('hi!')
+//         }
+//     }
+// }
+
+// const obj = Object.assign({} , o1, o2 , o3)
+
+
+// try {
+
+//     console.log('Начало блока try');  // (1) <--
+  
+//     lalala; // ошибка, переменная не определена!
+  
+//     console.log('Конец блока try (никогда не выполнится)');  // (2)
+  
+//   } catch(err) {
+  
+//     console.log(`Возникла ошибка!`); // (3) <--
+  
+//   }
+
+// setTimeout( () => {
+//     try {
+//         lala
+//     } catch (e) {
+//         console.log('mistake!')
+//         console.log(e.name)
+//         console.log(e.message)
+//         console.log(e.stack)
+//     }
+// }, 1000)
+
+
+// let data = '{"age": "13"}';
+// try {
+//     let user = JSON.parse(data);
+
+//     if(!user.name) throw new Error('Ooops,user has no name!')
+// } catch(e) {
+//     console.log(e)
+// }
+
+// function readData() {
+//     let json = '{ "age": 30 }';
+  
+//     try {
+//       // ...
+//       blabla(); // ошибка!
+//     } catch (e) {
+//       // ...
+//       if (e.name != 'SyntaxError') {
+//         throw e; // проброс исключения (не знаю как это обработать)
+//       }
+//     }
+//   }
+  
+//   try {
+//     readData();
+//   } catch (e) {
+//     console.log( "Внешний catch поймал: " + e ); // поймал!
+//   }
