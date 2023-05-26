@@ -3055,3 +3055,49 @@
 // })
 
 // setTimeout(() => console.log(promise),8000)
+
+// // Запрашиваем user.json
+// fetch('/article/promise-chaining/user.json')
+//   // Загружаем данные в формате json
+//   .then(response => response.json())
+//   // Делаем запрос к GitHub
+//   .then(user => fetch(`https://api.github.com/users/${user.name}`))
+//   // Загружаем ответ в формате json
+//   .then(response => response.json())
+//   // Показываем аватар (githubUser.avatar_url) в течение 3 секунд (возможно, с анимацией)
+//   .then(githubUser => {
+//     let img = document.createElement('img');
+//     img.src = githubUser.avatar_url;
+//     img.className = "promise-avatar-example";
+//     document.body.append(img);
+
+//     setTimeout(() => img.remove(), 3000); // (*)
+//   });
+
+  
+
+//   let result = new Promise(res => {
+//     setTimeout(() => {
+//         res(10)
+//     },2000)
+//   })
+//   .then(res => {
+//     return res * 2;
+//   })
+//   .then(res => {
+//     console.log(res)
+//     // mistake;
+//     return res;
+//   })
+//   .catch(err => console.log(err))
+//   .then(res => {
+//     console.log(res + ': result done')
+//     return res;
+//   });
+
+// new Promise(resolve => {
+//     resolve(result)
+// })
+// .then(res => {
+//     console.log(typeof res)
+// })
