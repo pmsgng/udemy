@@ -2968,19 +2968,62 @@
   
 //   delay(3000).then(() => console.log('выполнилось через 3 секунды'));
 
-let promise = new Promise(res => {
-    setTimeout(() => res([1,2,3]),2000)
-})
+// let promise = new Promise(res => {
+//     setTimeout(() => res([1,2,3]),2000)
+// })
 
 
-let promise2 = new Promise(res => {
-    setTimeout(() => res('good'),1500)
-})
+// let promise2 = new Promise(res => {
+//     setTimeout(() => res('good'),1500)
+// })
 
-let promise3 = new Promise(rej => {
-    setTimeout(() => rej(new Error('Ooooops!')),5000) 
-})
+// let promise3 = new Promise(rej => {
+//     setTimeout(() => rej(new Error('Ooooops!')),5000) 
+// })
 
-Promise.all([promise,promise2,promise3])
-.then(data => data.forEach(i => console.log( i)))
-.catch(err => console.log(err))
+// Promise.all([promise,promise2,promise3])
+// .then(data => data.forEach(i => console.log( i)))
+// .catch(err => console.log(err))
+
+// function delay(ms) {
+//     // ваш код
+//     return new Promise(res => {
+//         setTimeout(() => res('good'),ms)
+//     })
+//   }
+  
+//   delay(3000).then((data) => console.log(`'${data}' done 3 sec`));
+
+
+// let promise = new Promise(res => {
+//     setTimeout(() => res(10), 2000)
+// }).then(data => {
+//     setTimeout(() => {
+//         console.log(data)
+//         return data *2
+//     },2000)
+// })
+
+// new Promise(function(resolve, reject) {
+
+//     setTimeout(() => resolve(1), 1000); // (*)
+  
+//   }).then(function(result) { // (**)
+  
+//     // console.log(result); // 1
+//     setTimeout(() => {
+//         console.log(result)
+//     },2000)
+//     return result * 2;
+  
+//   }).then(function(result) { // (***)
+//     setTimeout(() => console.log(result),3000)
+//     // console.log(result); // 2
+//     return result * 2;
+  
+//   }).then(function(result) {
+  
+//     console.log(result); // 4
+//     return result * 2;
+  
+//   });
