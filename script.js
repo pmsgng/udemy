@@ -3027,3 +3027,31 @@
 //     return result * 2;
   
 //   });
+
+// const promise = new Promise(resolve => {
+//     setTimeout(() => {
+//         return resolve(10)
+//     },2000)
+// }).then(result => {
+//     console.log(result)
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             return resolve(result * 2)
+//         },2000)
+//     })
+// }).then(result => {
+//     console.log(result)
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             return resolve(result * 2)
+//         },2000)
+//     })
+// }).then(data => {
+//     console.log(data)
+//     // asdasd; // Ошибка! catch() ловит ошибку 
+//     return data
+// }).catch(err => {
+//     console.log(err.name)
+// })
+
+// setTimeout(() => console.log(promise),8000)
