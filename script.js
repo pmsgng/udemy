@@ -2583,19 +2583,19 @@
 //         .replace('h', hours)
 //         .replace('m', mins)
 //         .replace('s', secs);
-  
+
 //       console.log(output);
 //     }
-  
+
 //     stop () {
 //       clearInterval(this.timer);
 //     };
-  
+
 //     start () {
 //       this.render();
 //       this.timer = setInterval(() => this.render(), 1000);
 //     };
-  
+
 // }
 
 // let clock = new Clock({template: 'h:m:s'});
@@ -2757,7 +2757,7 @@
 //     } else {
 //         box1.show()
 //     }
-    
+
 //     if(circle1.$el.style.display == 'none') {
 //         circle1.show()
 //     } else {
@@ -2792,34 +2792,34 @@
 //     get waterAmount() {
 //         return this._waterAmount;
 //     }
-  
+
 //     constructor(power) {
 //       this.power = power;
 //       console.log( `Создана кофеварка, мощность: ${power}` );
 //     }
-  
+
 //   }
-  
+
 //   // создаём кофеварку
 //   let coffeeMachine = new CoffeeMachine(100);
-  
+
 //   // добавляем воды
 //   coffeeMachine.waterAmount = 200;
 
 // class CoffeeMachine {
 
 //     #waterAmount = 0;
-  
+
 //     get waterAmount() {
 //       return this.#waterAmount;
 //     }
-  
+
 //     set waterAmount(value) {
 //       if (value < 0) throw new Error("Отрицательный уровень воды");
 //       this.#waterAmount = value;
 //     }
 //   }
-  
+
 //   let machine = new CoffeeMachine();
 
 
@@ -2883,15 +2883,15 @@
 // try {
 
 //     console.log('Начало блока try');  // (1) <--
-  
+
 //     lalala; // ошибка, переменная не определена!
-  
+
 //     console.log('Конец блока try (никогда не выполнится)');  // (2)
-  
+
 //   } catch(err) {
-  
+
 //     console.log(`Возникла ошибка!`); // (3) <--
-  
+
 //   }
 
 // setTimeout( () => {
@@ -2917,7 +2917,7 @@
 
 // function readData() {
 //     let json = '{ "age": 30 }';
-  
+
 //     try {
 //       // ...
 //       blabla(); // ошибка!
@@ -2928,7 +2928,7 @@
 //       }
 //     }
 //   }
-  
+
 //   try {
 //     readData();
 //   } catch (e) {
@@ -2950,7 +2950,7 @@
 
 // let promise = new Promise(function(resolve, reject) {
 //     // эта функция выполнится автоматически, при вызове new Promise
-  
+
 //     // через 1 секунду сигнализировать, что задача выполнена с результатом "done"
 //     setTimeout(() => resolve("done"), 1000);
 //   });
@@ -2965,7 +2965,7 @@
 //     // ваш код
 //     return new Promise(res => setTimeout(res, ms))
 //   }
-  
+
 //   delay(3000).then(() => console.log('выполнилось через 3 секунды'));
 
 // let promise = new Promise(res => {
@@ -2991,7 +2991,7 @@
 //         setTimeout(() => res('good'),ms)
 //     })
 //   }
-  
+
 //   delay(3000).then((data) => console.log(`'${data}' done 3 sec`));
 
 
@@ -3007,25 +3007,25 @@
 // new Promise(function(resolve, reject) {
 
 //     setTimeout(() => resolve(1), 1000); // (*)
-  
+
 //   }).then(function(result) { // (**)
-  
+
 //     // console.log(result); // 1
 //     setTimeout(() => {
 //         console.log(result)
 //     },2000)
 //     return result * 2;
-  
+
 //   }).then(function(result) { // (***)
 //     setTimeout(() => console.log(result),3000)
 //     // console.log(result); // 2
 //     return result * 2;
-  
+
 //   }).then(function(result) {
-  
+
 //     console.log(result); // 4
 //     return result * 2;
-  
+
 //   });
 
 // const promise = new Promise(resolve => {
@@ -3074,7 +3074,7 @@
 //     setTimeout(() => img.remove(), 3000); // (*)
 //   });
 
-  
+
 
 //   let result = new Promise(res => {
 //     setTimeout(() => {
@@ -3101,3 +3101,82 @@
 // .then(res => {
 //     console.log(typeof res)
 // })
+
+// function delay(ms) {
+//     return new Promise(res => setTimeout(() => res(),ms))
+// }
+
+// async function getData() {
+//     try{
+//         // await delay(2000);
+//         const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//         const data = await response.json();
+//         return data;
+
+//     } catch(e) {
+//         console.log(e);
+//     }
+// }
+
+// const data = getData()
+
+// const blockPromise =  document.querySelector('.main__promise_block');
+
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(response => response.json())
+//       .then(json => console.log(json))
+
+
+// async function getData() {
+//     let json = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     let data = await json.json();
+//     console.log(data)
+// }
+
+// getData()
+const url = 'https://jsonplaceholder.typicode.com/users/1'
+const url2 = 'https://jsonplaceholder.typicode.com/users/2'
+const mainBlock = document.querySelector('.main');
+const divJs = document.querySelector('.js')
+
+function makeUser(user, userSelector) {
+    let userBlock = document.querySelector(userSelector);
+    userBlock.textContent = `Я ${user.id} посетитель сайта! Меня зовут ${user.name}! Я живу в ${user.address.city}! Мой email : ${user.email}`
+};
+
+function makeDynamicUser({name , email}) {
+    const div = document.createElement('div');
+    div.className = 'main__user2'
+    div.style.width = "6rem";
+    div.style.height = "100px";
+    div.style.background = "gray";
+    div.style.color = "white";
+    div.innerHTML = "Hello";
+    mainBlock.insertAdjacentElement('afterbegin',div)
+    div.innerText = `Hi, my name is ${name}. Send me mail on ${email}`
+}
+
+async function loadJson(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json()
+        console.log(data)
+        const user = '.main__promise_block'
+        makeUser(data, user)
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+
+loadJson(url) // (3)
+
+
+async function getData() {
+    const response = await fetch(url2)
+    const data = await response.json()
+    makeDynamicUser(data)
+}
+
+getData()
