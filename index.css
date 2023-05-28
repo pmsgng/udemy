@@ -23,6 +23,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    overflow-y: scroll;
 }
 .header {
     display: flex;
@@ -70,11 +72,14 @@ body {
     transform: translateY(.1rem) translateX(-.1rem);
 }
 .main {
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-top: 13rem;
+    margin-bottom: 10rem;
 }
 .js{
     margin-bottom: 1rem;
@@ -125,3 +130,17 @@ body {
     width: 12rem;
 }
 
+.main__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15rem;
+    height: 6rem;
+    background-color: #cecece;
+
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 2rem;
+
+    margin-bottom: 1rem;
+    padding: 1rem;
+}

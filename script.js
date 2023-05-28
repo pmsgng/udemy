@@ -3135,48 +3135,80 @@
 // }
 
 // getData()
-const url = 'https://jsonplaceholder.typicode.com/users/1'
-const url2 = 'https://jsonplaceholder.typicode.com/users/2'
-const mainBlock = document.querySelector('.main');
-const divJs = document.querySelector('.js')
+const urlUser1 = 'https://jsonplaceholder.typicode.com/users/1'
+const urlUser2 = 'https://jsonplaceholder.typicode.com/users/2'
+const urlUser3 = 'https://jsonplaceholder.typicode.com/users/3'
+const urlUser4 = 'https://jsonplaceholder.typicode.com/users/4'
+const urlUser5 = 'https://jsonplaceholder.typicode.com/users/5'
+const urlUser6 = 'https://jsonplaceholder.typicode.com/users/6'
+const urlUser7 = 'https://jsonplaceholder.typicode.com/users/7'
+const urlUser8 = 'https://jsonplaceholder.typicode.com/users/8'
+const mainContainer = document.querySelector('.main')
+// const mainBlock = document.querySelector('.main');
+// const divJs = document.querySelector('.js')
 
-function makeUser(user, userSelector) {
-    let userBlock = document.querySelector(userSelector);
-    userBlock.textContent = `Я ${user.id} посетитель сайта! Меня зовут ${user.name}! Я живу в ${user.address.city}! Мой email : ${user.email}`
-};
+// function makeUser(user, userSelector) {
+//     let userBlock = document.querySelector(userSelector);
+//     userBlock.textContent = `Я ${user.id} посетитель сайта! Меня зовут ${user.name}! Я живу в ${user.address.city}! Мой email : ${user.email}`
+// };
 
-function makeDynamicUser({name , email}) {
-    const div = document.createElement('div');
-    div.className = 'main__user2'
-    div.style.width = "6rem";
-    div.style.height = "100px";
-    div.style.background = "gray";
-    div.style.color = "white";
-    div.innerHTML = "Hello";
-    mainBlock.insertAdjacentElement('afterbegin',div)
-    div.innerText = `Hi, my name is ${name}. Send me mail on ${email}`
-}
+// function makeDynamicUser({name , email}) {
+//     const div = document.createElement('div');
+//     div.className = 'main__user2'
+//     div.style.width = "6rem";
+//     div.style.height = "100px";
+//     div.innerHTML = "Hello";
+//     mainBlock.insertAdjacentElement('afterbegin',div)
+//     div.innerText = `Hi, my name is ${name}. Send me mail on ${email}`
+// }
 
-async function loadJson(url) {
+// async function loadJson(url) {
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json()
+//         console.log(data)
+//         const user = '.main__promise_block'
+//         makeUser(data, user)
+//     } catch (e) {
+//         console.log(e)
+//     }
+// }
+
+
+// loadJson(url) // (3)
+
+
+// async function getData() {
+//     const response = await fetch(url2)
+//     const data = await response.json()
+//     makeDynamicUser(data)
+// }
+
+// getData()
+
+
+async function getData(url) {
     try {
-        const response = await fetch(url);
-        const data = await response.json()
-        console.log(data)
-        const user = '.main__promise_block'
-        makeUser(data, user)
-    } catch (e) {
-        console.log(e)
+        const response = await fetch(url)
+        const user = await response.json()
+        console.log(user)
+        renderUser(user)
+    } catch (err) {
+        console.log(err)
     }
 }
 
-
-loadJson(url) // (3)
-
-
-async function getData() {
-    const response = await fetch(url2)
-    const data = await response.json()
-    makeDynamicUser(data)
+function renderUser(user) {
+    // const userContainer = document.querySelector('.main__user');
+    const divUser = document.createElement('div');
+    divUser.className = 'main__user';
+    divUser.innerHTML = `User: ${user.name} <br> Company: ${user.company.name} <br> Address: ${user.address.city} <br> Email: ${user.email}`
+    mainContainer.append(divUser)
 }
 
-getData()
+getData(urlUser1)
+getData(urlUser2)
+getData(urlUser3)
+getData(urlUser4)
+getData(urlUser5)
+getData(urlUser6)
